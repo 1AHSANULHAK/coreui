@@ -7,26 +7,26 @@
 >
   <c-sidebar-brand
     [brandFull]="{
-      src: '',
+      src: 'assets/img/brand/bg.jpeg',
       width: 200,
       height: 46,
       alt: 'logo'
     }"
     [brandNarrow]="{
-      src: 'assets/img/brand/coreui-signet-white.svg',
+      src: 'assets/img/brand/bg.jpeg',
       width: 46,
       height: 46,
-      alt: 'CoreUI Logo'
+      alt: ''
     }"
     routerLink="./"
   />
 
-  <ng-scrollbar pointerEventsMethod="scrollbar">
+  <!-- <ng-scrollbar pointerEventsMethod="scrollbar">
     <c-sidebar-nav
       [navItems]="navItems"
       dropdownMode="close"
     />
-  </ng-scrollbar>
+  </ng-scrollbar> -->
   <c-sidebar-toggler
     *ngIf="!sidebar.narrow"
     toggle="unfoldable"
