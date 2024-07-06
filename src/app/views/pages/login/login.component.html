@@ -4,29 +4,29 @@
     <c-card-group style="max-width: 450px;">
               <c-card class="p-3" style="background-color: rgb(255, 255, 255); color: beige;">
             <c-card-body>
-              <form cForm > 
+              <form [formGroup]="myform" (ngSubmit)="Login()"> 
                 <h1 class="text-center " style="color: black;">Login</h1>
                 <p class="text-body-secondary text-center" style="font-weight: 600;">Inventory Management System</p>
                 <c-input-group class="mb-3">
                   <span cInputGroupText>
                     <svg cIcon name="cilUser"></svg>
                   </span>
-                  <input autoComplete="username" cFormControl placeholder="Username" />
+                  <input formControlName="username" autoComplete="username" placeholder="Username" />
                 </c-input-group>
                 <c-input-group class="mb-4">
                   <span cInputGroupText>
                     <svg cIcon name="cilLockLocked"></svg>
                   </span>
-                  <input
+                  <input formControlName="password"
                     autoComplete="current-password"
-                    cFormControl
+                 
                     placeholder="Password"
                     type="password"
                   />
                 </c-input-group>
                 <c-row>
                   <c-col xs="12" class="justify-content-center d-flex">
-                    <button cButton class="px-4" color="primary">
+                    <button type="submit"  class="px-4" color="primary">
                       Login
                     </button>
                   </c-col>
